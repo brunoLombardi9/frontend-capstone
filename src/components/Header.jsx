@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../components/css/Header.css";
-import { Link } from "react-router-dom";
+import "./css/Header.css";
+import { Link, NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { MdOutlineClose } from "react-icons/md";
 
@@ -22,6 +22,34 @@ const Header = () => {
         <img src={require("../assets/LogoColor.png")} alt="logo" id="navLogo" />
       </Link>
 
+      <nav id="mobileScreenNav">
+        <ul className={`${nav ? "showNav" : "hideNav"}`}>
+          {routes.map((r) => (
+            <li key={r.name}>
+              <NavLink
+                to={r.link}
+                className="mobileScreenNavLinks"
+                onClick={() => setNav(false)}
+              >
+                {r.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <nav id="wideScreenNav">
+        <ul>
+          {routes.map((r) => (
+            <li key={r.name}>
+              <NavLink to={r.link} className="wideScreenNavLinks">
+                {r.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
       <div id="mobileScreenBtns">
         {!nav ? (
           <MdMenu size={50} onClick={() => setNav(true)} />
@@ -29,32 +57,6 @@ const Header = () => {
           <MdOutlineClose size={50} onClick={() => setNav(false)} />
         )}
       </div>
-
-      {nav && (
-        <nav id="mobileScreenNav">
-          <ul className={`${nav ? "showNav" : "hideNav"}`}>
-            {routes.map((r) => (
-              <li key={r.name}>
-                <Link to={r.link} className={`navLinks`}>
-                  {r.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
-
-      <nav id="wideScreenNav">
-        <ul>
-          {routes.map((r) => (
-            <li key={r.name}>
-              <Link to={r.link} className="navLinks">
-                {r.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 };

@@ -1,0 +1,10 @@
+#heroSection{
+    height: 500px;
+    background-color: #495e57;
+}
+
+@media (min-width: 960px){
+    #heroSection{
+        height: 350px;
+    }
+}
