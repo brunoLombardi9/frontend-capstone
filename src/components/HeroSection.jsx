@@ -3,7 +3,10 @@ import "./css/HeroSection.css"
 
 const HeroSection = () => {
   return (
-    <section id='heroSection'></section>
+    <section id='heroSection'>
+      <p>1</p>
+      <p>2</p>
+    </section>
   )
 }
 

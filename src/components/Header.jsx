@@ -23,7 +23,7 @@ const Header = () => {
       </Link>
 
       <nav id="mobileScreenNav">
-        <ul className={`${nav ? "showNav" : "hideNav"}`}>
+        <ul id={`${nav ? "showNav" : "hideNav"}`}>
           {routes.map((r) => (
             <li key={r.name}>
               <NavLink

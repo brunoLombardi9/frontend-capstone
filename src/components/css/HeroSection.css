@@ -1,10 +1,15 @@
 #heroSection{
     height: 500px;
     background-color: #495e57;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 960px){
     #heroSection{
         height: 350px;
+        flex-direction: row;
     }
 }
