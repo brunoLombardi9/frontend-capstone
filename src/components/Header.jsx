@@ -1,31 +1,22 @@
 import React, { useState } from "react";
 import "./css/Header.css";
 import { Link, NavLink } from "react-router-dom";
-import { MdMenu } from "react-icons/md";
-import { MdOutlineClose } from "react-icons/md";
-
-const routes = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Menu", link: "/menu" },
-  { name: "Reservations", link: "/reservations" },
-  { name: "Order Online", link: "/orderOnline" },
-  { name: "Login", link: "/login" },
-];
+import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { routes } from "../App";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
 
   return (
     <header>
-      <Link to="/">
+      <Link to="/" onClick={() => setNav(false)}>
         <img src={require("../assets/LogoColor.png")} alt="logo" id="navLogo" />
       </Link>
 
       <nav id="mobileScreenNav">
-        <ul id={`${nav ? "showNav" : "hideNav"}`}>
-          {routes.map((r) => (
-            <li key={r.name}>
+        <ul id={nav ? "showNav" : "hideNav"}>
+          {routes.map((r, index) => (
+            <li key={index}>
               <NavLink
                 to={r.link}
                 className="mobileScreenNavLinks"
@@ -40,8 +31,8 @@ const Header = () => {
 
       <nav id="wideScreenNav">
         <ul>
-          {routes.map((r) => (
-            <li key={r.name}>
+          {routes.map((r, index) => (
+            <li key={index}>
               <NavLink to={r.link} className="wideScreenNavLinks">
                 {r.name}
               </NavLink>
@@ -50,12 +41,8 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div id="mobileScreenBtns">
-        {!nav ? (
-          <MdMenu size={50} onClick={() => setNav(true)} />
-        ) : (
-          <MdOutlineClose size={50} onClick={() => setNav(false)} />
-        )}
+      <div id="mobileScreenBtns" onClick={() => setNav(!nav)}>
+        {!nav ? <MdMenu size={50} /> : <MdOutlineClose size={50} />}
       </div>
     </header>
   );

@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import PageUnderConstruction from "../components/PageUnderConstruction";
 
 const Menu = () => {
-  return (
-    <div>Menu</div>
-  )
-}
+  return <PageUnderConstruction />;
+};
 
-export default Menu
+export default Menu;

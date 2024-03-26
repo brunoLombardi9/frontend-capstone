@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import PageUnderConstruction from "../components/PageUnderConstruction";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  return <PageUnderConstruction />;
+};
 
-export default Login
+export default Login;

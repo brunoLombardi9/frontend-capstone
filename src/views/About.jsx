@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import PageUnderConstruction from "../components/PageUnderConstruction";
 
 const About = () => {
-  return (
-    <div>About</div>
-  )
-}
+  return <PageUnderConstruction />;
+};
 
-export default About
+export default About;

@@ -1,0 +1,17 @@
+#underConstruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #495e57;
+}
+
+#underConstruction svg {
+  height: 100px;
+}
+
+#underConstruction h1 {
+  font-size: 2rem;
+
+}

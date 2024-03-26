@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import PageUnderConstruction from "../components/PageUnderConstruction";
 
 const OrderOnline = () => {
-  return (
-    <div>OrderOnline</div>
-  )
-}
+  return <PageUnderConstruction />;
+};
 
-export default OrderOnline
+export default OrderOnline;
