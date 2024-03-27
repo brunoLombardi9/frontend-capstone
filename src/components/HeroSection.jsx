@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section id="heroSection">
-      <div id="textArea">
+      <div className="textArea">
         <h1>Little Lemon</h1>
-        <p id="city">California</p>
-        <p id="text">
+        <p className="city">California</p>
+        <p className="text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
           pariatur adipisci quo voluptate. Fugit, soluta.
         </p>

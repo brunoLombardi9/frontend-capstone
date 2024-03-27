@@ -9,27 +9,27 @@
   line-height: 1;
 }
 
-#textArea {
+#heroSection .textArea {
   display: flex;
   flex-direction: column;
   color: white;
 }
 
-#textArea h1 {
+#heroSection .textArea h1 {
   color: #f4ce14;
   font-weight: bold;
-  font-size: 2.3rem;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 5px;
 }
 
-#city {
+#heroSection .city {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-#text {
+#heroSection .text {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
@@ -76,7 +76,7 @@
     bottom: -30px;
   }
 
-  #text {
+  #heroSection .text {
     width: 80%;
   }
 }

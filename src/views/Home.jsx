@@ -1,13 +1,17 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import Promotions from "../components/Promotions";
+import Testimonials from "../components/Testimonials";
+import RestaurantInfo from "../components/RestaurantInfo";
 
 const Home = () => {
   return (
-    <main>
+    <>
       <HeroSection />
       <Promotions />
-    </main>
+      <Testimonials />
+      <RestaurantInfo />
+    </>
   );
 };
 

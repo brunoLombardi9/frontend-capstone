@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { routes } from "../App";
 
 const contactList = [
-  { icon: <MdLocationOn />, text: "1234 Elm Street, Springfield, IL 62701" },
+  { icon: <MdLocationOn />, text: "1234 Elm Street, IL 62701" },
   { icon: <MdLocalPhone />, text: "(217) 555-1234" },
   { icon: <MdEmail />, text: "restaurant@littlelemon.com" }
 ];

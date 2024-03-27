@@ -1,0 +1,77 @@
+#restaurantInfo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #495e57;
+}
+
+#restaurantInfo .textArea h2 {
+  color: #f4ce14;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+#restaurantInfo .city {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  margin: auto;
+  gap: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#infoGrid .textArea {
+  display: flex;
+  flex-direction: column;
+}
+
+#infoGrid .textArea .text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#restaurantImageCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#restaurantImageCol img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+@media (min-width: 600px){
+  #restaurantImageCol{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  #infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #restaurantImageCol{
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 960px) {
+  #restaurantInfo {
+    flex-direction: row;
+  }
+  #infoGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}

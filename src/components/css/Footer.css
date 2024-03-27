@@ -1,5 +1,6 @@
 footer {
   min-height: 300px;
+  justify-content: center;
   background-color: #495e57;
   color: white;
   padding: 40px;
@@ -19,7 +20,7 @@ footer {
 }
 
 footer h2 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -72,9 +73,10 @@ footer h2 {
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
   footer {
     grid-template-columns: repeat(3, 1fr);
+    padding-inline: 150px;
   }
 }
 
